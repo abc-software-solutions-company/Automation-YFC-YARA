@@ -1,0 +1,9 @@
+{
+    "status": "FAILURE",
+    "error": {
+        "code": 403,
+        "message": "Forbidden",
+        "responseCode": 1006,
+        "responseMessage": "Operation is forbidden"
+    }
+}

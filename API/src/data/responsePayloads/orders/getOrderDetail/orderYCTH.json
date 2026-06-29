@@ -1,0 +1,95 @@
+{
+    "status": "SUCCESS",
+    "data": {
+        "orderId": "3d5217a5-80e4-42ab-aede-32754cbfc396",
+        "orderNumber": "001-02052026-0010",
+        "orderType": "B2C",
+        "OrderStatus": "FULFILLED",
+        "source": "ORGANIC",
+        "sellerId": "373cbb6d-ad91-4414-bfe9-ec22a7eb62dd",
+        "sellerShopId": "b1c7f410-5676-4cde-b5f9-eddd3a6d888a",
+        "createdAt": "2026-05-02T15:03:03.091Z",
+        "transactionDate": "2026-05-02T15:03:03.517Z",
+        "estimatedBillAmount": 1100,
+        "shopPrice": 1100,
+        "transactionType": "ONLINE",
+        "finalAmount": 1080,
+        "paymentType": "Cash",
+        "category": "Product",
+        "metadata": {},
+        "locationId": "fe65483d-a303-4ded-b1f6-d6fea1e182f9",
+        "couponCode": "1777734183146",
+        "couponId": "10OFFYARA1",
+        "couponType": null,
+        "discountId": "f5aca1b2-64d6-409c-b05b-7f4c7549e0c4",
+        "discountValue": 20,
+        "discountStatus": "REDEEMED",
+        "paymentStatus": null,
+        "settlementStatus": null,
+        "inventoryStatus": "SUCCESS",
+        "isDispute": false,
+        "deliveryType": "PICKUP",
+        "rewardPoints": 0,
+        "orderDetails": [
+            {
+                "isEdited": false,
+                "productId": "YARA_MILA_14_14_21#BAG_50KG",
+                "orderedQuantity": 2,
+                "fulfilledQuantity": 2,
+                "mrp": 9999,
+                "sellingPrice": 500,
+                "productName": "ยารามีร่า 14-14-21",
+                "variantName": "ยารามีร่า 14-14-21",
+                "productFamilyName": "ยารามีร่า",
+                "productSize": "50 KG",
+                "isYaraProduct": false,
+                "photo": "https://yaraconnect.apac.yaradigitallabs.io/OnlineShop/products/TH/YaraMila-14-14-21.jpg",
+                "metric": "KG",
+                "packagingType": "Bag",
+                "volume": 50,
+                "form": "solid"
+            },
+            {
+                "isEdited": false,
+                "productId": "d24fde69-ebe7-4360-a105-cbeb74555507",
+                "orderedQuantity": 1,
+                "fulfilledQuantity": 1,
+                "mrp": 9999,
+                "sellingPrice": 100,
+                "productName": "ยาราวีต้า โฟซิงค์",
+                "variantName": "ยาราวีต้า โฟซิงค์",
+                "productFamilyName": "ยาราวีต้า",
+                "productSize": "1 L",
+                "isYaraProduct": false,
+                "photo": "https://yaraconnect.apac.yaradigitallabs.io/OnlineShop/products/TH/YaraVita-Phozinc-1LT.jpg",
+                "metric": "L",
+                "packagingType": "Bottle",
+                "volume": 1,
+                "form": "liquid"
+            }
+        ],
+        "placedBy": {
+            "buyerId": "4894be62-56be-46bd-a6d3-a0423ac4f841",
+            "fullName": "SUONG TEST",
+            "phoneNumber": "+915443332241",
+            "language": "en"
+        },
+        "ycProducts": [
+            {
+                "QRList": [],
+                "productId": "YARA_MILA_14_14_21#BAG_50KG"
+            },
+            {
+                "QRList": [],
+                "productId": "d24fde69-ebe7-4360-a105-cbeb74555507"
+            }
+        ],
+        "cancellationReason": null,
+        "rejectedBy": null,
+        "fulfilledAt": "2026-05-02T15:03:03.790Z",
+        "preferredSellerUsed": false,
+        "metaInfo": {
+            "sellerShopType": "5af221a7-8b75-4fb7-9e1e-db39cd5ea1b1"
+        }
+    }
+}

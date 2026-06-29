@@ -1,0 +1,183 @@
+import dotenv from "dotenv";
+
+// Load environment variables
+const result = dotenv.config();
+
+export const config = {
+    baseUrl: process.env.BASE_URL!,
+    clientId: process.env.CLIENT_ID!,
+    clientSecret: process.env.CLIENT_SECRET!,
+    scope: process.env.SCOPE!,
+    url: {
+        token: process.env.TOKEN_ENDPOINT!,
+        customer: {
+            create: process.env.CUSTOMER_CREATE_API!,
+        },
+    },
+    tenantId: process.env.TENANT_ID,
+    services: {
+        discount_service: {
+            baseURL: process.env.DISCOUNT_SERVICE_BASE_URL!,
+            tokenUrl: process.env.DISCOUNT_SERVICE_TOKEN_URL!,
+            clientId: process.env.DISCOUNT_SERVICE_CLIENT_ID!,
+            clientSecret: process.env.DISCOUNT_SERVICE_CLIENT_SECRET!,
+            scope: process.env.DISCOUNT_SERVICE_SCOPE!,
+        },
+        in_marketplace_service: {
+            baseURL: process.env.IN_MARKETPLACE_SERVICE_BASE_URL!,
+            tokenUrl: process.env.IN_MARKETPLACE_SERVICE_TOKEN_URL!,
+            clientId: process.env.IN_MARKETPLACE_SERVICE_CLIENT_ID!,
+            clientSecret: process.env.IN_MARKETPLACE_SERVICE_CLIENT_SECRET!,
+            scope: process.env.IN_MARKETPLACE_SERVICE_SCOPE!,
+        },
+        id_marketplace_service: {
+            baseURL: process.env.ID_MARKETPLACE_SERVICE_BASE_URL!,
+            tokenUrl: process.env.ID_MARKETPLACE_SERVICE_TOKEN_URL!,
+            clientId: process.env.ID_MARKETPLACE_SERVICE_CLIENT_ID!,
+            clientSecret: process.env.ID_MARKETPLACE_SERVICE_CLIENT_SECRET!,
+            scope: process.env.ID_MARKETPLACE_SERVICE_SCOPE!,
+        },
+        th_marketplace_service: {
+            baseURL: process.env.TH_MARKETPLACE_SERVICE_BASE_URL!,
+            tokenUrl: process.env.TH_MARKETPLACE_SERVICE_TOKEN_URL!,
+            clientId: process.env.TH_MARKETPLACE_SERVICE_CLIENT_ID!,
+            clientSecret: process.env.TH_MARKETPLACE_SERVICE_CLIENT_SECRET!,
+            scope: process.env.TH_MARKETPLACE_SERVICE_SCOPE!,
+        },
+        th_loyalty_service: {
+            baseURL: process.env.TH_LOYALTY_SERVICE_BASE_URL!,
+            tokenUrl: process.env.TH_LOYALTY_SERVICE_TOKEN_URL!,
+            clientId: process.env.TH_LOYALTY_SERVICE_CLIENT_ID!,
+            clientSecret: process.env.TH_LOYALTY_SERVICE_CLIENT_SECRET!,
+            scope: process.env.TH_LOYALTY_SERVICE_SCOPE!,
+        },
+        tz_loyalty_service: {
+            baseURL: process.env.TZ_LOYALTY_SERVICE_BASE_URL!,
+            tokenUrl: process.env.TZ_LOYALTY_SERVICE_TOKEN_URL!,
+            clientId: process.env.TZ_LOYALTY_SERVICE_CLIENT_ID!,
+            clientSecret: process.env.TZ_LOYALTY_SERVICE_CLIENT_SECRET!,
+            scope: process.env.TZ_LOYALTY_SERVICE_SCOPE!,
+        },
+        id_loyalty_service: {
+            baseURL: process.env.ID_LOYALTY_SERVICE_BASE_URL!,
+            tokenUrl: process.env.ID_LOYALTY_SERVICE_TOKEN_URL!,
+            clientId: process.env.ID_LOYALTY_SERVICE_CLIENT_ID!,
+            clientSecret: process.env.ID_LOYALTY_SERVICE_CLIENT_SECRET!,
+            scope: process.env.ID_LOYALTY_SERVICE_SCOPE!,
+        },
+        ke_loyalty_service: {
+            baseURL: process.env.KE_LOYALTY_SERVICE_BASE_URL!,
+            tokenUrl: process.env.KE_LOYALTY_SERVICE_TOKEN_URL!,
+            clientId: process.env.KE_LOYALTY_SERVICE_CLIENT_ID!,
+            clientSecret: process.env.KE_LOYALTY_SERVICE_CLIENT_SECRET!,
+            scope: process.env.KE_LOYALTY_SERVICE_SCOPE!,
+        },
+        farmer_service: {
+            baseURL: process.env.FARMER_SERVICE_BASE_URL!,
+            tokenUrl: process.env.FARMER_SERVICE_TOKEN_URL!,
+            clientId: process.env.FARMER_SERVICE_CLIENT_ID!,
+            clientSecret: process.env.FARMER_SERVICE_CLIENT_SECRET!,
+            scope: process.env.FARMER_SERVICE_SCOPE!,
+        },
+        id_marketplace_service_yc_token: {
+            baseURL: process.env.ID_MARKETPLACE_SERVICE_BASE_URL!,
+            tokenUrl: process.env.YC_SERVICE_TOKEN!,
+            clientId: process.env.MARKETPLACE_SERVICE_YC_TOKEN_CLIENT_ID!,
+            clientSecret: process.env.MARKETPLACE_SERVICE_YC_TOKEN_CLIENT_SECRET!,
+            scope: process.env.MARKETPLACE_SERVICE_YC_TOKEN_SCOPE!,
+        },
+        in_marketplace_service_yc_token: {
+            baseURL: process.env.IN_MARKETPLACE_SERVICE_BASE_URL!,
+            tokenUrl: process.env.YC_SERVICE_TOKEN!,
+            clientId: process.env.MARKETPLACE_SERVICE_YC_TOKEN_CLIENT_ID!,
+            clientSecret: process.env.MARKETPLACE_SERVICE_YC_TOKEN_CLIENT_SECRET!,
+            scope: process.env.MARKETPLACE_SERVICE_YC_TOKEN_SCOPE!,
+        },
+        th_marketplace_service_yc_token: {
+            baseURL: process.env.TH_MARKETPLACE_SERVICE_BASE_URL!,
+            tokenUrl: process.env.YC_SERVICE_TOKEN!,
+            clientId: process.env.MARKETPLACE_SERVICE_YC_TOKEN_CLIENT_ID!,
+            clientSecret: process.env.MARKETPLACE_SERVICE_YC_TOKEN_CLIENT_SECRET!,
+            scope: process.env.MARKETPLACE_SERVICE_YC_TOKEN_SCOPE!,
+        },
+        ke_marketplace_service_yc_token: {
+            baseURL: process.env.KE_MARKETPLACE_SERVICE_BASE_URL!,
+            tokenUrl: process.env.YC_SERVICE_TOKEN!,
+            clientId: process.env.MARKETPLACE_SERVICE_YC_TOKEN_CLIENT_ID!,
+            clientSecret: process.env.MARKETPLACE_SERVICE_YC_TOKEN_CLIENT_SECRET!,
+            scope: process.env.MARKETPLACE_SERVICE_YC_TOKEN_SCOPE!,
+        },
+        tz_marketplace_service_yc_token: {
+            baseURL: process.env.TZ_MARKETPLACE_SERVICE_BASE_URL!,
+            tokenUrl: process.env.YC_SERVICE_TOKEN!,
+            clientId: process.env.MARKETPLACE_SERVICE_YC_TOKEN_CLIENT_ID!,
+            clientSecret: process.env.MARKETPLACE_SERVICE_YC_TOKEN_CLIENT_SECRET!,
+            scope: process.env.MARKETPLACE_SERVICE_YC_TOKEN_SCOPE!,
+        },
+        my_marketplace_service_yc_token: {
+            baseURL: process.env.MY_MARKETPLACE_SERVICE_BASE_URL!,
+            tokenUrl: process.env.YC_SERVICE_TOKEN!,
+            clientId: process.env.MARKETPLACE_SERVICE_YC_TOKEN_CLIENT_ID!,
+            clientSecret: process.env.MARKETPLACE_SERVICE_YC_TOKEN_CLIENT_SECRET!,
+            scope: process.env.MARKETPLACE_SERVICE_YC_TOKEN_SCOPE!,
+        },
+        vn_marketplace_service_yc_token: {
+            baseURL: process.env.VN_MARKETPLACE_SERVICE_BASE_URL!,
+            tokenUrl: process.env.YC_SERVICE_TOKEN!,
+            clientId: process.env.MARKETPLACE_SERVICE_YC_TOKEN_CLIENT_ID!,
+            clientSecret: process.env.MARKETPLACE_SERVICE_YC_TOKEN_CLIENT_SECRET!,
+            scope: process.env.MARKETPLACE_SERVICE_YC_TOKEN_SCOPE!,
+        },
+    },
+    otp: {
+        hmacSecret: process.env.OTP_HMAC_SECRET || "f5b122e5-1b7c-4dca-b323-cef4f6ebb0c4",
+        smsBaseUrl: process.env.OTP_SMS_BASE_URL || "https://usermanagement-sms.stage.apac.yaradigitallabs.io/api/v1",
+        environment: process.env.OTP_ENVIRONMENT || "preprod",
+        vendor: process.env.OTP_VENDOR || "aws-sns",
+        authService: process.env.OTP_AUTH_SERVICE || "azure",
+        redirectUri: process.env.OTP_REDIRECT_URI || "https://preprod.yarafarmcare.com/auth/callback",
+    },
+    countryServices: {
+        marketplace_service: {
+            in: {
+                baseURL: process.env.ORDER_SERVICE_IN_BASE_URL!,
+                token: process.env.ORDER_SERVICE_IN_TOKEN!,
+            },
+            th: {
+                baseURL: process.env.ORDER_SERVICE_TH_BASE_URL!,
+                token: process.env.ORDER_SERVICE_TH_TOKEN!,
+            },
+            id: {
+                baseURL: process.env.ORDER_SERVICE_ID_BASE_URL!,
+                token: process.env.ORDER_SERVICE_ID_TOKEN!,
+            },
+            ke: {
+                baseURL: process.env.ORDER_SERVICE_KE_BASE_URL!,
+                token: process.env.ORDER_SERVICE_KE_TOKEN!,
+            },
+            tz: {
+                baseURL: process.env.ORDER_SERVICE_TZ_BASE_URL!,
+                token: process.env.ORDER_SERVICE_TZ_TOKEN!,
+            },
+            my: {
+                baseURL: process.env.ORDER_SERVICE_MY_BASE_URL!,
+                token: process.env.ORDER_SERVICE_MY_TOKEN!,
+            },
+            vn: {
+                baseURL: process.env.ORDER_SERVICE_VN_BASE_URL!,
+                token: process.env.ORDER_SERVICE_VN_TOKEN!,
+            },
+        },
+    },
+} as const;
+export type ServiceName = keyof typeof config.services;
+export type CountryServiceName = keyof typeof config.countryServices;
+export type CountryCode<S extends CountryServiceName> = keyof (typeof config.countryServices)[S];
+
+export function getCountryServiceConfig(service: CountryServiceName, country: string) {
+    const svc = config.countryServices[service];
+    if (!svc) throw new Error(`Unknown country service: ${service}`);
+    const countryConfig = (svc as Record<string, { baseURL: string; token: string }>)[country];
+    if (!countryConfig) throw new Error(`Unknown country '${country}' for service '${service}'`);
+    return countryConfig;
+}

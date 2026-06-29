@@ -1,0 +1,8 @@
+{
+    "status": "success",
+    "code": 200,
+    "message": "Discount cloned successfully",
+    "data": {
+        "discountId": "4613e418-911f-4043-b836-987eca8494ad"
+    }
+}

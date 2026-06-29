@@ -1,0 +1,11 @@
+{
+    "issuer": "ls",
+    "sub": "string",
+    "role": "USER",
+    "buyerShopId": "c92025eb-94dd-4835-9937-2b0954c8f5de",
+    "buyerId": "0fc44bca-11bc-41ea-be6a-5b0ebc4d3874",
+
+    "sellerShopId": "b1c7f410-5676-4cde-b5f9-eddd3a6d888a",
+    "sellerId": "373cbb6d-ad91-4414-bfe9-ec22a7eb62dd",
+    "expiresInSec": 500
+}

@@ -1,0 +1,76 @@
+{
+    "areOptionalConditionsEnabled": false,
+    "discountTag": "test",
+    "areCustomisedProductConditions": true,
+    "discountAppliedFor": "c87a510a-c390-46da-9303-313d95ce1357",
+    "discountLevels": "86437e2c-f104-4f11-bc2a-837bc07d8a2f",
+    "level1Locations": [],
+    "messageLocalised": {
+        "en": "Test TH",
+        "th": ""
+    },
+    "name": "Test discount",
+    "nameLocalised": {
+        "en": "Test discount",
+        "th": ""
+    },
+    "orderLevel": {},
+    "startDate": "2026-04-17T00:00:00.000+07:00",
+    "endDate": "2026-04-30T00:00:00.000+07:00",
+    "products": [
+        {
+            "productVariantId": "f77c464d-e88d-4c9e-848a-27efc38fd4c0",
+            "discountValueAndType": {
+                "value": 2,
+                "type": "Percentage"
+            },
+            "maximumDiscountValueAndCurrency": {
+                "value": 100,
+                "currency": "THB"
+            },
+            "minimumSkuOrderValueAndCurrency": {
+                "value": 10,
+                "currency": "THB"
+            },
+            "minimumSkuOrderQtyAndUnit": {
+                "quantity": 3,
+                "unit": "PACKAGING_UNIT"
+            },
+            "isMandatory": false
+        },
+        {
+            "productVariantId": "e31e14f7-778d-4852-b7e4-7c0034d8ba59",
+            "discountValueAndType": {
+                "value": 3,
+                "type": "Fixed"
+            },
+            "maximumDiscountValueAndCurrency": {
+                "value": 200,
+                "currency": "THB"
+            },
+            "minimumSkuOrderValueAndCurrency": {
+                "value": 100,
+                "currency": "THB"
+            },
+            "minimumSkuOrderQtyAndUnit": {
+                "quantity": 7,
+                "unit": "PACKAGING_UNIT"
+            },
+            "isMandatory": false
+        }
+    ],
+    "maxUsePerUser": 6,
+    "termsAndConditionsLocalised": {
+        "en": "Test TH",
+        "th": ""
+    },
+    "couponType": "generic",
+    "couponCode": "code21",
+    "images": ["temp_upload/1776329430246-download.png"],
+    "numberOfCoupons": 0,
+    "buUserId": "8f038f5f-5342-49c2-9afd-f51aff4f9c6a",
+    "membership": [],
+    "segmentIds": [],
+    "platform": "farmcare",
+    "isEligibleForLoyaltyCampaign": false
+}

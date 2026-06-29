@@ -1,0 +1,57 @@
+{
+    "status": "SUCCESS",
+    "errors": {},
+    "data": {
+        "orderNumber": "24062026-0046",
+        "retailerInfo": {
+            "shopName": "Child Shop Sep Twe",
+            "address": "12, Abiansemal",
+            "phoneNumber": "+915555544001"
+        },
+        "orderDate": "24 June 2026, 20:39",
+        "orderItems": [
+            {
+                "productName": "YaraRega (25)",
+                "familyName": "YaraRega",
+                "variantName": "YaraRega (25)",
+                "size": "25 KG",
+                "mediaUrls": ["https://d2potd4ihliqnc.cloudfront.net/4d1c5d95-5895-48b4-b6f9-74dd3dfc20ed/product-variants/68997937cd91a72688e205db/53c6bc38-58bc-4974-b2f9-38657d2f5de9/1754888472886-YaraRega15x325kgMockupStand_Newsmaller3.png"],
+                "quantity": 2,
+                "fulfilledQuantity": 2,
+                "fulfilledItemValue": "Rp500000",
+                "itemValue": "Rp500000",
+                "orderedSellingPrice": "Rp8000",
+                "fulfilledSellingPrice": "Rp8000",
+                "estimatedTotal": 8000,
+                "strikeOrderedMrp": true,
+                "strikeFulfilledMrp": true,
+                "isInputFinanceAvailable": false
+            }
+        ],
+        "orderedEstimatedTotal": 8000,
+        "fulfilledEstimatedTotal": 1000000,
+        "total": 8000,
+        "couponId": "2Mar",
+        "discountValue": 10,
+        "estimatedFinalTotal": 7990,
+        "finalOrderValue": 7990,
+        "totalOrderValue": 8000,
+        "hasDiscount": true,
+        "currencySymbol": "Rp",
+        "language": "id",
+        "category": "Product",
+        "OrderStatus": "FULFILLED",
+        "cancellationReason": "",
+        "deliveryType": "PICKUP",
+        "hasDelivery": false,
+        "showMRP": false,
+        "isPendingLoanOrder": false,
+        "isInputFinanceOpted": false,
+        "totalApprovedLoanAmount": 0,
+        "isMpesaPayment": false,
+        "paymentType": "Cash",
+        "paymentStatus": null,
+        "fulfilledAt": "24 June 2026, 20:39",
+        "isDispute": false
+    }
+}

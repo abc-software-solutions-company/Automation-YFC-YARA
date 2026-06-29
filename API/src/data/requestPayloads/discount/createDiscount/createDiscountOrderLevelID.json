@@ -1,0 +1,57 @@
+{
+    "areOptionalConditionsEnabled": false,
+    "discountTag": "test",
+    "areCustomisedProductConditions": false,
+    "discountAppliedFor": "2b263df6-1ce4-4b8f-b0f8-dbcaf13841f3",
+    "discountLevels": "82bdb97f-480a-48c7-9ea0-13a37f5be38c",
+    "level1Locations": [],
+    "messageLocalised": {
+        "en_ID": "FromAutomationApi",
+        "id": "FromAutomationApi"
+    },
+    "name": "FromAutomationApi",
+    "nameLocalised": {
+        "en_ID": "FromAutomationApi",
+        "id": "FromAutomationApi"
+    },
+    "termsAndConditionsLocalised": {
+        "en_ID": "test",
+        "id": "test"
+    },
+    "images": [
+        {
+            "url": "https://yaraconnect-discount-service-preprod.s3.ap-southeast-1.amazonaws.com/4d1c5d95-5895-48b4-b6f9-74dd3dfc20ed/discount-images/458a11b6-008c-4c77-8f24-1454209a2c6c/1776234922194-download(1).jpeg"
+        }
+    ],
+    "orderLevel": {
+        "discountValueAndType": {
+            "value": 1,
+            "type": "Percentage"
+        },
+        "maximumDiscountValueAndCurrency": {
+            "value": 1,
+            "currency": "INR"
+        },
+        "minimumCartOrderValue": {
+            "value": 1,
+            "currency": "INR"
+        },
+        "minimumOrderQty": {
+            "value": 1,
+            "unit": "KG_OR_L"
+        }
+    },
+    "startDate": "2027-02-10T17:00:00.000Z",
+    "endDate": "2028-02-11T17:00:00.000Z",
+    "products": [],
+    "maxUsePerUser": 1,
+    "couponType": "generic",
+    "couponCode": "12011123",
+    "numberOfCoupons": 0,
+    "buUserId": "242232bd-6435-4fc8-b76d-893cbfa68904",
+    "membership": [],
+    "segmentIds": [],
+    "platform": "farmcare",
+    "isEligibleForLoyaltyCampaign": true,
+    "discountId": "5f56c143-948f-43bd-9458-dc2d953bcfa3"
+}

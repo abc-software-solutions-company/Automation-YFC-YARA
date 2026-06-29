@@ -1,0 +1,114 @@
+{
+    "areOptionalConditionsEnabled": true,
+    "discountTag": "test",
+    "areCustomisedProductConditions": false,
+    "discountAppliedFor": "19696a18-9ab8-4a88-ac9c-1bcad8b597ba",
+    "discountLevels": "ca28d6a3-fc38-41b6-b93f-e7d894b6fd70",
+    "level1Locations": [],
+    "messageLocalised": {
+        "en": "Test",
+        "kn": "",
+        "mr": "",
+        "pa": "",
+        "ta": "",
+        "te": "",
+        "hi": "",
+        "gu": "",
+        "bn": ""
+    },
+    "name": "IN",
+    "nameLocalised": {
+        "en": "IN",
+        "kn": "",
+        "mr": "",
+        "pa": "",
+        "ta": "",
+        "te": "",
+        "hi": "",
+        "gu": "",
+        "bn": ""
+    },
+    "orderLevel": {
+        "discountValueAndType": {
+            "value": 1,
+            "type": "Fixed"
+        },
+        "maximumDiscountValueAndCurrency": {
+            "value": 1,
+            "currency": "INR"
+        },
+        "minimumCartOrderValue": {
+            "value": 1,
+            "currency": "INR"
+        },
+        "minimumOrderQty": {
+            "value": 1,
+            "unit": "PACKAGING_UNIT"
+        }
+    },
+    "startDate": "2026-04-21T23:00:00.000+05:30",
+    "endDate": "2026-04-30T00:00:00.000+05:30",
+    "products": [
+        {
+            "productVariantId": "df23a0ab-98d4-46d0-98c6-0fb2f48647c2",
+            "discountValueAndType": {
+                "value": 0,
+                "type": "Percentage"
+            },
+            "maximumDiscountValueAndCurrency": {
+                "value": null,
+                "currency": "INR"
+            },
+            "minimumSkuOrderValueAndCurrency": {
+                "value": 2,
+                "currency": "INR"
+            },
+            "minimumSkuOrderQtyAndUnit": {
+                "quantity": 2,
+                "unit": "PACKAGING_UNIT"
+            },
+            "isMandatory": false
+        },
+        {
+            "productVariantId": "cedfc7b9-99dd-43ed-90ef-fdc9d2db140d",
+            "discountValueAndType": {
+                "value": 0,
+                "type": "Percentage"
+            },
+            "maximumDiscountValueAndCurrency": {
+                "value": null,
+                "currency": "INR"
+            },
+            "minimumSkuOrderValueAndCurrency": {
+                "value": 2,
+                "currency": "INR"
+            },
+            "minimumSkuOrderQtyAndUnit": {
+                "quantity": 2,
+                "unit": "PACKAGING_UNIT"
+            },
+            "isMandatory": false
+        }
+    ],
+    "maxUsePerUser": 63636,
+    "termsAndConditionsLocalised": {
+        "en": "Test",
+        "kn": "",
+        "mr": "",
+        "pa": "",
+        "ta": "",
+        "te": "",
+        "hi": "",
+        "gu": "",
+        "bn": ""
+    },
+    "couponType": "generic",
+    "couponCode": "365",
+    "images": ["temp_upload/1776785642636-Screenshot2026-04-21at10.02.08.png"],
+    "numberOfCoupons": 0,
+    "buUserId": "335d51c0-78fe-4fe3-a680-4f0d53bbf949",
+    "membership": [],
+    "segmentIds": [],
+    "platform": "farmcare",
+    "isEligibleForLoyaltyCampaign": false
+}

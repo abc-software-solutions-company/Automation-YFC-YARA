@@ -1,0 +1,22 @@
+{
+    "statusCode": 422,
+    "message": [
+        {
+            "target": {
+                "buUserId": "1234"
+            },
+            "value": "1234",
+            "property": "buUserId",
+            "children": [],
+            "constraints": {
+                "isUuid": "buUserId must be an UUID value"
+            }
+        }
+    ],
+    "error": "Unprocessable Entity",
+    "reasons": [
+        {
+            "buUserId": "buUserId must be an UUID value"
+        }
+    ]
+}

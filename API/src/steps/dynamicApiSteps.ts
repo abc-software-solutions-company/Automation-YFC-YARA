@@ -1,0 +1,206 @@
+import { Given, When, Then, DataTable } from "@cucumber/cucumber";
+import { buildHeadersDynamic } from "../api/header/builderHeadersDynamic";
+import { buildPayload } from "../api/payload/builderPayloadDynamic";
+import { buildQueryFromTable } from "../api/queryParams/builderQueryDynamic";
+import { executeDynamicRequest, executeCountryRequest } from "../api/restApi/requestExecutor";
+import { readJsonPath } from "../api/response/jsonPath";
+import type { CustomWorld } from "../support/world";
+import { Utils } from "../common/utils/utils";
+import { DateTimeUtils } from "../common/utils/dateTimeUtils";
+import { parseDynamicValue } from "../common/utils/dynamicUtils";
+import { ApiEndpoints, ApiEndpointKey } from "../api/endpoints/apiEndpoints";
+import { assertSchema } from "../api/response/validator";
+import { ApiValidator } from "../api/validator/validator";
+import { config, ServiceName, CountryServiceName } from "../support/config";
+import { randomUUID } from "crypto";
+import { execSync } from "child_process";
+import * as path from "path";
+
+type TableRow = { key: string; value: string };
+
+// Shared values
+Given("I set shared values:", function (this: CustomWorld, dataTable: DataTable) {
+    const rows = dataTable.hashes() as TableRow[];
+    for (const r of rows) {
+        const key = String(r.key || "").trim();
+        if (!key) {
+            throw new Error("Key is empty in shared values table");
+        }
+        const parsed = parseDynamicValue(r.value, this.resolveValue.bind(this));
+        this.dynamicValues[key] = parsed;
+        console.log("[Shared] dynamicValues =\n", JSON.stringify(this.dynamicValues, null, 2));
+    }
+});
+
+Given("I generate random uuid as {string}", function (key: string) {
+    let uuid = randomUUID();
+    this.dynamicValues[key] = uuid;
+    console.log(`[UUID] ${key} =`, uuid);
+});
+
+Given("I generate random 4char4digit as {string}", function (key: string) {
+    this.dynamicValues[key] = Utils.random4Char4Digit();
+});
+
+// Dynamic headers
+Given("I build dynamic headers with:", function (this: CustomWorld, dataTable: DataTable) {
+    const rows = dataTable.hashes() as TableRow[];
+    const newHeaders = buildHeadersDynamic(rows, this.resolveValue.bind(this));
+    this.dynamicHeaders = {
+        ...this.dynamicHeaders,
+        ...newHeaders,
+    };
+});
+
+// build payload without override file
+Given("I build payload from {string}", function (this: CustomWorld, payloadName: string) {
+    this.requestPayload = buildPayload({ payloadName, resolve: this.resolveValue.bind(this) });
+});
+
+// Dynamic payload with override from table
+Given("I build dynamic payload from {string} with:", function (this: CustomWorld, payloadName: string, dataTable: DataTable) {
+    const rows = dataTable.hashes() as TableRow[];
+    this.requestPayload = buildPayload({ payloadName, rows, resolve: this.resolveValue.bind(this) });
+});
+
+// Dynamic query params
+Given("I build dynamic query params with:", function (this: CustomWorld, dataTable: DataTable) {
+    const rows = dataTable.hashes() as TableRow[];
+    this.dynamicQuery = buildQueryFromTable(rows, this.resolveValue.bind(this));
+});
+
+// Path params
+Given("I set path params:", function (this: CustomWorld, dataTable: DataTable) {
+    const rows = dataTable.hashes() as TableRow[];
+    this.pathParams = {};
+    for (const r of rows) {
+        const k = String(r.key || "").trim();
+        if (!k) continue;
+        this.pathParams[k] = this.resolveValue(String(r.value ?? ""));
+    }
+});
+
+Given("I run tag {string}", function (tag: string) {
+    const cwd = path.resolve(__dirname, "../../");
+    console.log(`🚀 Running scenarios with tag: ${tag}`);
+
+    try {
+        const result = execSync(`npx cucumber-js --tags "${tag}"`, {
+            cwd,
+            encoding: "utf-8",
+            stdio: "pipe",
+        });
+        console.log(`✅ Done:\n${result}`);
+    } catch (err: any) {
+        console.error(`❌ Failed:\n${err.stdout || err.message}`);
+        throw new Error(`Sub-scenario [${tag}] failed`);
+    }
+});
+
+When("I send {string} request to {string} on {string} service", async function (this: CustomWorld, method: string, endpoint: ApiEndpointKey, service: ServiceName) {
+    await executeDynamicRequest(this, service, method, endpoint);
+});
+
+// Send request for country service
+When("I send {string} request to {string} on {string} service for {string} country", async function (this: CustomWorld, method: string, endpoint: ApiEndpointKey, service: string, country: string) {
+    await executeCountryRequest(this, service as CountryServiceName, country, method, endpoint);
+});
+
+When("I store response field {string} as {string}", function (this: CustomWorld, fieldPath: string, paramName: string) {
+    if (!this.response?.data) {
+        throw new Error("❌ Response data is empty");
+    }
+
+    const value = ApiValidator.getValueByPath(this.response.data, fieldPath);
+
+    if (value === undefined) {
+        throw new Error(`❌ Field '${fieldPath}' not found in response`);
+    }
+
+    this.sharedParams[paramName] = value;
+
+    // console.log(`✅ Stored response field [${fieldPath}] → {{${paramName}}}`);
+    // console.log(`📦 sharedParams:\n${JSON.stringify(this.sharedParams, null, 2)}`);
+});
+
+Then("I extract from response:", function (this: CustomWorld, dataTable: DataTable) {
+    if (!this.response?.data) {
+        throw new Error("❌ Response data is empty");
+    }
+    const rows = dataTable.hashes() as { variable: string; path: string }[];
+
+    for (const row of rows) {
+        const variable = String(row.variable || "").trim();
+        const fieldPath = String(row.path || "").trim();
+
+        if (!variable || !fieldPath) continue;
+
+        const value = ApiValidator.getValueByPath(this.response.data, fieldPath);
+
+        if (value === undefined) {
+            throw new Error(`❌ Field '${fieldPath}' not found in response`);
+        }
+
+        this.dynamicValues[variable] = String(value);
+        // console.log(`✅ Extracted [${fieldPath}] → {{${variable}}} = ${value}`);
+    }
+
+    console.log(`📦 dynamicValues:\n${JSON.stringify(this.dynamicValues, null, 2)}`);
+});
+
+Then("The response status should be {int}", function (this: CustomWorld, expected: number) {
+    const from = this.responseBody;
+    console.log(JSON.stringify(this.response.data, null, 2));
+    ApiValidator.statusCode(this.response, expected);
+});
+
+Then("I save response path {string} as {string}", function (this: CustomWorld, path: string, key: string) {
+    const from = this.responseBody;
+    const value = readJsonPath(from, path);
+    this.dynamicValues[key] = String(value);
+});
+
+Then("response matches schema {string}", function (this: CustomWorld, schemaName: string) {
+    const body = this.responseBody;
+    const result = assertSchema(schemaName, body);
+});
+
+Then("The response should match json {string}", function (fileName: string) {
+    ApiValidator.matchJsonFile(this.responseBody, fileName);
+});
+
+Then("The response should match json {string} with:", function (this: CustomWorld, fileName: string, dataTable: DataTable) {
+    const rows = dataTable.hashes() as TableRow[];
+    ApiValidator.matchDynamicResponseJsonFile(this.response.data, fileName, rows, this.resolveValue.bind(this));
+});
+Then("The response body should contain text: {string}", function (text: string) {
+    ApiValidator.bodyContains(this.responseBody, text);
+});
+
+Then("The array {string} length should be {int}", function (path: string, expectedLength: number) {
+    ApiValidator.arrayLength(this.responseBody, path, expectedLength);
+});
+
+Then("The array {string} should have length greater than {int}", function (path: string, length: number) {
+    ApiValidator.expectArrayLengthGreaterThan(this.responseBody, path, length);
+});
+
+Then("The array {string} should have length less than {int}", function (path: string, length: number) {
+    ApiValidator.expectArrayLengthLessThan(this.responseBody, path, length);
+});
+
+Then("The response should contain:", function (dataTable: DataTable) {
+    const rows = dataTable.hashes() as TableRow[];
+    ApiValidator.containsJson(this.response.data, rows);
+});
+
+Then("The response should contain data:", function (this: CustomWorld, dataTable: DataTable) {
+    const rows = dataTable.hashes() as TableRow[];
+    // Convert the data from variable to data
+
+    const resolvedRows = rows.map((row) => ({
+        key: row.key,
+        value: this.resolveValue(String(row.value)),
+    }));
+    ApiValidator.containsJson(this.response.data, resolvedRows);
+});

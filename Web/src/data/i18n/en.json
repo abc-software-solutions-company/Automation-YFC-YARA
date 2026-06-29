@@ -1,0 +1,73 @@
+{
+    "data-testId": {
+        "data-testId_country_list_india": "country-list-India"
+    },
+    "common": {
+        "placeholder_location_search_box": "Enter your area, pincode, etc.",
+        "add_location_header": "Add location",
+        "search_box": "Search",
+        "confirm_location_button": "Confirm location",
+        "change_location_button": "Change location",
+        "store_tab": "Store",
+        "add_to_cart_button": "Add to cart",
+        "account_tab": "Account",
+        "sign_up_login_button": "Sign up / Login",
+        "pending_tab": "Pending",
+        "past_orders_tab": "Past Orders",
+        "view_order_button": "View order",
+        "view_all_button": "View all",
+        "stores_near_you_section": "Stores near you",
+        "send_code_via_whatsapp_button": "Send code via WhatsApp",
+        "send_code_via_sms_button": "Send code via SMS",
+        "country_code": "Country code",
+        "mobile_number": "Mobile number",
+        "confirm": "Confirm",
+        "place_order": "Place Order",
+        "yes_confirm": "Yes, Confirm",
+        "continue": "Continue",
+        "privacy_and_legal": "Privacy and legal",
+        "communication": "Communication",
+        "marketing_communications": "Marketing communications",
+        "manage_communications": "Manage communications",
+        "manage_your_communication_preferences": "Manage your communication preferences",
+        "communications_and_advertising": "Communications and advertising",
+        "description_of_communications_and_advertising": "Yes, I would like to receive communications and advertisements from Yara about products and services that may be helpful for me.",
+        "what_will_i_receive": "What will I receive",
+        "what_will_i_receive?": "What will I receive?",
+        "privacy": "Privacy",
+        "digital_farming_terms": "Digital Farming Terms",
+        "privacy_policy": "Privacy Policy"
+    },
+
+    "guest": {
+        "continue_as_guest": "Continue as guest"
+    },
+
+    "gethelp": {
+        "get_help_menu": "Get help",
+        "submit_new_request": "Submit new request",
+        "first_name_field": "First name",
+        "last_name_field": "Last name",
+        "select_topic_field": "Select topic",
+        "agronomic_enquiry": "Agronomic enquiry",
+        "crops_field": "Crops",
+        "subject_field": "Subject",
+        "describe_your_issue_field": "Describe your issue",
+        "phone_model_or_os_field": "Phone model or OS",
+        "create_request_button": "Create request",
+        "feedback_submitted": "Feedback submitted!",
+        "support_ticket_id": "Support ticket ID:",
+        "feedback_has_been_submitted": "Your feedback has been submitted.",
+        "back_to_home": "Back to home",
+        "my_requests": "My requests",
+        "search_by_topic_or_id": "Search by topic name or ID",
+        "search_by_topic": "Search by topic name",
+        "no_results": "No results",
+        "faq": "Frequently asked questions",
+        "filter_new": "New",
+        "filter_open": "Open",
+        "filter_needs_response": "Needs response",
+        "filter_solved": "Solved",
+        "filter_closed": "Closed"
+    }
+}

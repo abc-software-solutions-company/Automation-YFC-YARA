@@ -1,0 +1,12 @@
+{
+    "currentDate": "2026-01-22T22:42:38.423Z",
+    "pagination": {
+        "limit": 10,
+        "offset": 0
+    },
+    "status": ["Planned"],
+    "sort": {
+        "field": "updatedAt",
+        "order": "desc"
+    }
+}

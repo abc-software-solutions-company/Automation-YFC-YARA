@@ -1,0 +1,141 @@
+import assert from "assert";
+import fs from "fs";
+import path from "path";
+
+export class Utils {
+    //#region String Utilities
+
+    static randomString(length: number): string {
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        return Array.from({ length }, () => chars.charAt(Math.floor(Math.random() * chars.length))).join("");
+    }
+
+    static capitalize(str: string): string {
+        if (!str) return "";
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    static randomDigit(length: number): string {
+        const digits = "0123456789";
+        return Array.from({ length }, () => digits.charAt(Math.floor(Math.random() * digits.length))).join("");
+    }
+
+    static splitString(text: string): string[] {
+        return text
+            .split(",")
+            .map((t) => t.trim())
+            .filter(Boolean);
+    }
+
+    static parseCurrency(text: string): number {
+        return Number(text.replace(/[^\d]/g, ""));
+    }
+
+    //#endregion
+
+    //#region Date/Time Utilities
+
+    private static format(date: Date): string {
+        const yyyy = date.getFullYear();
+        const mm = String(date.getMonth() + 1).padStart(2, "0");
+        const dd = String(date.getDate()).padStart(2, "0");
+        return `${yyyy}-${mm}-${dd}`;
+    }
+
+    private static clone(date: Date): Date {
+        return new Date(date.getTime());
+    }
+
+    // ===== Current =====
+    static currentDateTime(): string {
+        const d = new Date();
+        return `${this.format(d)} ${d.toTimeString().split(" ")[0]}`; // YYYY-MM-DD HH:mm:ss
+    }
+
+    static currentDate(): string {
+        return this.format(new Date());
+    }
+
+    static getCurrentMonth(): string {
+        return String(new Date().getMonth() + 1).padStart(2, "0");
+    }
+
+    static currentYear(): string {
+        return String(new Date().getFullYear());
+    }
+
+    static timestamp(): number {
+        return Date.now();
+    }
+
+    // ===== Day operations =====
+    static addDays(days: number): string {
+        const d = new Date();
+        d.setDate(d.getDate() + days);
+        return this.format(d);
+    }
+
+    static futureDate(days: number): string {
+        return this.addDays(days);
+    }
+
+    static pastDate(days: number): string {
+        return this.addDays(-days);
+    }
+
+    static getDate(keyword: "yesterday" | "today" | "tomorrow"): string {
+        switch (keyword) {
+            case "yesterday":
+                return this.addDays(-1);
+            case "today":
+                return this.currentDate();
+            case "tomorrow":
+                return this.addDays(1);
+        }
+    }
+
+    // ===== Month operations) =====
+    private static shiftMonth(offset: number): Date {
+        const d = new Date();
+        const day = d.getDate();
+
+        d.setDate(1);
+        d.setMonth(d.getMonth() + offset);
+
+        const lastDay = new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate();
+        d.setDate(Math.min(day, lastDay));
+
+        return d;
+    }
+
+    static getNextMonth(): string {
+        const d = this.shiftMonth(1);
+        return String(d.getMonth() + 1).padStart(2, "0");
+    }
+
+    static getLastMonth(): string {
+        const d = this.shiftMonth(-1);
+        return String(d.getMonth() + 1).padStart(2, "0");
+    }
+
+    //#endregion
+
+    //#region Fake Data Generators
+
+    static randomEmail(): string {
+        return `user_${Utils.randomString(6)}@example.com`;
+    }
+
+    static randomPhoneNumber(): string {
+        const prefix = ["090", "091", "092"];
+        return `${prefix[Math.floor(Math.random() * prefix.length)]}${Math.floor(1000000 + Math.random() * 9000000)}`;
+    }
+
+    //#endregion
+    static randomFullName(): string {
+        const firstNames = ["Alice", "Bob", "Charlie", "David", "Emma", "Fiona", "George", "Hannah", "Ivan", "Julia"];
+        const lastNames = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Wilson", "Taylor"];
+        const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
+        return `${pick(firstNames)} ${pick(lastNames)}`;
+    }
+}

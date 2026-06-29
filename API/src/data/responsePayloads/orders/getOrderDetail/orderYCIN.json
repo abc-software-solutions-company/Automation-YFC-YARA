@@ -1,0 +1,95 @@
+{
+    "status": "SUCCESS",
+    "data": {
+        "orderId": "c662bd7d-2cd1-4904-8423-4b1f8f0d0730",
+        "orderNumber": "001-02052026-0029",
+        "orderType": "B2C",
+        "OrderStatus": "FULFILLED",
+        "source": "ORGANIC",
+        "sellerId": "0de634bc-d32c-4e7a-8924-f4605129a144",
+        "sellerShopId": "608b7286-0df6-4df3-8d1d-c167e46b286e",
+        "createdAt": "2026-05-02T14:45:21.606Z",
+        "transactionDate": "2026-05-02T14:45:22.016Z",
+        "estimatedBillAmount": 19000,
+        "shopPrice": 19000,
+        "transactionType": "ONLINE",
+        "finalAmount": 18000,
+        "paymentType": "Cash",
+        "category": "Product",
+        "metadata": {},
+        "locationId": "3df1ab7f-9bf0-4416-a139-37958c3783f4",
+        "couponCode": "1777733121648",
+        "couponId": "224",
+        "couponType": null,
+        "discountId": "c8f1ad97-eb65-4959-9fe3-df89397b9f1f",
+        "discountValue": 1000,
+        "discountStatus": "REDEEMED",
+        "paymentStatus": null,
+        "settlementStatus": null,
+        "inventoryStatus": "SUCCESS",
+        "isDispute": false,
+        "deliveryType": "PICKUP",
+        "rewardPoints": 0,
+        "orderDetails": [
+            {
+                "isEdited": false,
+                "productId": "eb8a2896-46fb-4f0c-82d7-a71a82e06e86",
+                "orderedQuantity": 2,
+                "fulfilledQuantity": 2,
+                "mrp": 7400,
+                "sellingPrice": 7000,
+                "productName": "Automation - Deltaspray (18:18:18)",
+                "variantName": "Automation - Deltaspray (18:18:18)",
+                "productFamilyName": "YaraTera",
+                "productSize": "25 KG",
+                "isYaraProduct": true,
+                "photo": "https://d2potd4ihliqnc.cloudfront.net/ee92fab8-985f-4b0b-931d-d1d19151be45/product-variants/634ff2eeec8f28093b5b2e81/ed23b054-24c4-4e54-9336-9e5d05acd7ad/1770710057259-1698664919531-181818deltaspray.jpeg",
+                "metric": "KG",
+                "packagingType": "Bag",
+                "volume": 25,
+                "form": "solid"
+            },
+            {
+                "isEdited": false,
+                "productId": "ec67961f-c03f-4a8e-9ac9-0bedf0cc1b73",
+                "orderedQuantity": 1,
+                "fulfilledQuantity": 1,
+                "mrp": 5000,
+                "sellingPrice": 5000,
+                "productName": "Winner",
+                "variantName": "Winner",
+                "productFamilyName": "YaraMila",
+                "productSize": "25 KG",
+                "isYaraProduct": true,
+                "photo": "https://d2potd4ihliqnc.cloudfront.net/ee92fab8-985f-4b0b-931d-d1d19151be45/product-variants/634ff2f0ec8f28093b5b31b6/a70df1d5-0b3b-4797-a133-509babaa2a65/1770698000418-1698666000917-YaraMilaWinner.jpeg",
+                "metric": "KG",
+                "packagingType": "Bag",
+                "volume": 25,
+                "form": "solid"
+            }
+        ],
+        "placedBy": {
+            "buyerId": "3f8a6242-f420-4a6d-8dff-fffa0e2c9e86",
+            "fullName": "Suong IN",
+            "phoneNumber": "+915443332223",
+            "language": "en"
+        },
+        "ycProducts": [
+            {
+                "QRList": [],
+                "productId": "eb8a2896-46fb-4f0c-82d7-a71a82e06e86"
+            },
+            {
+                "QRList": [],
+                "productId": "ec67961f-c03f-4a8e-9ac9-0bedf0cc1b73"
+            }
+        ],
+        "cancellationReason": null,
+        "rejectedBy": null,
+        "fulfilledAt": "2026-05-02T14:45:22.259Z",
+        "preferredSellerUsed": false,
+        "metaInfo": {
+            "sellerShopType": "9d0394b4-c701-40f4-89ef-92b5fb092555"
+        }
+    }
+}

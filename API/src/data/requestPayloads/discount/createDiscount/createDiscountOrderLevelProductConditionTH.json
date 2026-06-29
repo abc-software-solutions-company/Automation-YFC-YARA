@@ -1,0 +1,93 @@
+{
+    "areOptionalConditionsEnabled": true,
+    "discountTag": "test",
+    "areCustomisedProductConditions": true,
+    "discountAppliedFor": "d146f48a-f318-491b-9639-be8bd43875b8",
+    "discountLevels": "8040350b-71ea-40da-ad3a-7af1f291aa5f",
+    "level1Locations": [],
+    "messageLocalised": {
+        "en": "Test TH",
+        "th": ""
+    },
+    "name": "TH",
+    "nameLocalised": {
+        "en": "TH",
+        "th": ""
+    },
+    "orderLevel": {
+        "discountValueAndType": {
+            "value": 2,
+            "type": "Fixed"
+        },
+        "maximumDiscountValueAndCurrency": {
+            "value": 2,
+            "currency": "THB"
+        },
+        "minimumCartOrderValue": {
+            "value": 2,
+            "currency": "THB"
+        },
+        "minimumOrderQty": {
+            "value": 2,
+            "unit": "PACKAGING_UNIT"
+        }
+    },
+    "startDate": "2026-04-22T00:00:00.000+07:00",
+    "endDate": "2026-04-30T00:00:00.000+07:00",
+    "products": [
+        {
+            "productVariantId": "aff71998-f9bf-4e4e-bc1f-101f814f7e0a",
+            "discountValueAndType": {
+                "value": 0,
+                "type": "Percentage"
+            },
+            "maximumDiscountValueAndCurrency": {
+                "value": null,
+                "currency": "THB"
+            },
+            "minimumSkuOrderValueAndCurrency": {
+                "value": 2,
+                "currency": "THB"
+            },
+            "minimumSkuOrderQtyAndUnit": {
+                "quantity": 2,
+                "unit": "PACKAGING_UNIT"
+            },
+            "isMandatory": false
+        },
+        {
+            "productVariantId": "908411b9-1717-4d71-a223-79f457dccca0",
+            "discountValueAndType": {
+                "value": 0,
+                "type": "Percentage"
+            },
+            "maximumDiscountValueAndCurrency": {
+                "value": null,
+                "currency": "THB"
+            },
+            "minimumSkuOrderValueAndCurrency": {
+                "value": 3,
+                "currency": "THB"
+            },
+            "minimumSkuOrderQtyAndUnit": {
+                "quantity": 2,
+                "unit": "PACKAGING_UNIT"
+            },
+            "isMandatory": true
+        }
+    ],
+    "maxUsePerUser": 2,
+    "termsAndConditionsLocalised": {
+        "en": "TEST TH",
+        "th": ""
+    },
+    "couponType": "generic",
+    "couponCode": "55",
+    "images": [],
+    "numberOfCoupons": 0,
+    "buUserId": "8f038f5f-5342-49c2-9afd-f51aff4f9c6a",
+    "membership": [],
+    "segmentIds": [],
+    "platform": "farmcare",
+    "isEligibleForLoyaltyCampaign": false
+}

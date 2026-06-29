@@ -1,0 +1,73 @@
+{
+    "status": "SUCCESS",
+    "data": {
+        "orderId": "52ae09fd-5b49-4527-b55e-ed8309081a85",
+        "orderNumber": "001-02052026-0015",
+        "orderType": "B2C",
+        "OrderStatus": "FULFILLED",
+        "source": "ORGANIC",
+        "sellerId": "baa7e59d-938c-4e0f-bfb9-44f068a1ed65",
+        "sellerShopId": "93b25369-cf74-4767-93ac-648923bc9f87",
+        "createdAt": "2026-05-02T15:03:01.076Z",
+        "transactionDate": "2026-05-02T15:03:01.614Z",
+        "estimatedBillAmount": 8000,
+        "shopPrice": 8000,
+        "transactionType": "ONLINE",
+        "finalAmount": 7990,
+        "paymentType": "Cash",
+        "category": "Product",
+        "metadata": {},
+        "locationId": "264bb15b-50a4-4aea-bf82-2f3df5e7bd4b",
+        "couponCode": "1777734181117",
+        "couponId": "2Mar",
+        "couponType": null,
+        "discountId": "cb4d6bad-48d3-4c46-a376-9e0bb33124a2",
+        "discountValue": 10,
+        "discountStatus": "REDEEMED",
+        "paymentStatus": null,
+        "settlementStatus": null,
+        "inventoryStatus": "SUCCESS",
+        "isDispute": false,
+        "deliveryType": "PICKUP",
+        "rewardPoints": 0,
+        "orderDetails": [
+            {
+                "isEdited": false,
+                "productId": "1bfee49d-b3ca-435d-b258-591b91752514",
+                "orderedQuantity": 2,
+                "fulfilledQuantity": 2,
+                "mrp": 500000,
+                "sellingPrice": 4000,
+                "productName": "YaraRega (25)",
+                "variantName": "YaraRega (25)",
+                "productFamilyName": "YaraRega",
+                "productSize": "25 KG",
+                "isYaraProduct": true,
+                "photo": "https://d2potd4ihliqnc.cloudfront.net/4d1c5d95-5895-48b4-b6f9-74dd3dfc20ed/product-variants/68997937cd91a72688e205db/53c6bc38-58bc-4974-b2f9-38657d2f5de9/1754888472886-YaraRega15x325kgMockupStand_Newsmaller3.png",
+                "metric": "KG",
+                "packagingType": "Bag",
+                "volume": 25,
+                "form": "solid"
+            }
+        ],
+        "placedBy": {
+            "buyerId": "574c2248-b633-4516-9d82-2cae8534f74d",
+            "fullName": "Suong",
+            "phoneNumber": "+914444411003",
+            "language": "id"
+        },
+        "ycProducts": [
+            {
+                "QRList": [],
+                "productId": "1bfee49d-b3ca-435d-b258-591b91752514"
+            }
+        ],
+        "cancellationReason": null,
+        "rejectedBy": null,
+        "fulfilledAt": "2026-05-02T15:03:02.156Z",
+        "preferredSellerUsed": false,
+        "metaInfo": {
+            "sellerShopType": "9d0394b4-c701-40f4-89ef-92b5fb092555"
+        }
+    }
+}
