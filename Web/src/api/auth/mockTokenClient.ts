@@ -1,9 +1,3 @@
-// YC preprod-only OAuth backdoor: impersonates any user via `phone_number` param.
-// Returns a JWT with that user's identity (farmer / retailer / etc.) accepted by marketplace + farmer services.
-//
-// All config is read from env vars (loaded from .env locally, or from CI secret/pipeline
-// variables in CI/CD). See .env.example. MOCK_TOKEN_CLIENT_SECRET must never be committed.
-
 function requireEnv(name: string): string {
     const value = process.env[name];
     if (!value) {
@@ -14,10 +8,6 @@ function requireEnv(name: string): string {
 
 const tokenCache = new Map<string, { token: string; expiresAt: number }>();
 
-/**
- * Get a JWT impersonating the user with the given phone number.
- * Tokens cached in-memory until 60s before expiry.
- */
 export async function getMockToken(phoneNumber: string): Promise<string> {
     const cached = tokenCache.get(phoneNumber);
     if (cached && cached.expiresAt > Date.now() + 60_000) return cached.token;
