@@ -272,9 +272,6 @@ export const REWARD_CATALOG: Record<string, string> = {
 };
 
 export const COUPON_CATALOG: Record<string, string> = {
-    // Coupon name → discount-strategy id from admin BFF (preprod).
-    // "ID" = Indonesia, "TH" = Thailand (matches ADMIN_TOKEN_ID / ADMIN_TOKEN_TH).
-    // Verified live 2026-07-01: earlier ids were deleted on preprod; these are the current ones.
     "Discount AUTO ID": "bb90e7bc-c5d3-44a6-ab45-32e198ed1c04",
     "Discount AUTO TH": "40be05e4-93c5-48da-98ff-b5c519155e68",
 };
