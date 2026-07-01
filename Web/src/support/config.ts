@@ -272,13 +272,11 @@ export const REWARD_CATALOG: Record<string, string> = {
 };
 
 export const COUPON_CATALOG: Record<string, string> = {
-    // Coupon name → discount-strategy id from admin BFF.
-    // "Discount AUTO" was originally 02287af6-... (strategy "2026-04-11 10:52:36"). Swapped to
-    // 6e5b9f1d-... (strategy "AUTO CAMG COUPON 1 (10000users)") on 2026-04-28 to debug whether
-    // the tracker-stuck-at-1/2 bug is strategy-specific. Old id kept as alias for reference.
-    "Discount AUTO": "6e5b9f1d-1697-4067-92e8-ea0c9852c4bd",
-    "Discount AUTO (legacy)": "02287af6-3bba-4c26-89c3-4148f37753a7",
-    "Discount AUTO TH": "cb8afec9-afa1-43c4-af04-ae92a2231dcc",
+    // Coupon name → discount-strategy id from admin BFF (preprod).
+    // "ID" = Indonesia, "TH" = Thailand (matches ADMIN_TOKEN_ID / ADMIN_TOKEN_TH).
+    // Verified live 2026-07-01: earlier ids were deleted on preprod; these are the current ones.
+    "Discount AUTO ID": "bb90e7bc-c5d3-44a6-ab45-32e198ed1c04",
+    "Discount AUTO TH": "40be05e4-93c5-48da-98ff-b5c519155e68",
 };
 
 export const ADMIN_CAMPAIGN_DEFAULT_IMAGE = "temp_upload/1777172494239-campaign-ind.jpeg";
