@@ -13,6 +13,8 @@ export const ApiEndpoints = {
     assistedOrderMP: "/orders/assistedOrder",
     assistedOrderLS: "/v1/online-shop/orders/assistedOrder",
     getOrderID: "orders/:id/context",
+    b2bDirectOrder: "/ros/orders",
+    
     // FL endpoints
     farmerDocumentSubmission: "/farmer-document-submission",
 
