@@ -42,7 +42,7 @@ Feature: Account Tab - Discount coupon campaign
         And User adds products to cart:
             | Product    | Quantity |
             | <Product1> | <Qty1>   |
-        When User goes on the shopping cart
+        When User clicks on the element of class "cart icon"
         When User clicks on the "<Checkout button>" button
         And User clicks on the "<Confirm button>" button
         Then User should be redirected to order success page
@@ -61,7 +61,7 @@ Feature: Account Tab - Discount coupon campaign
         And User adds products to cart:
             | Product    | Quantity |
             | <Product1> | <Qty1>   |
-        When User goes on the shopping cart
+        When User clicks on the element of class "cart icon"
         When User clicks on the "<Checkout button>" button
         And User clicks on the "<Confirm button>" button
         Then User should be redirected to order success page
