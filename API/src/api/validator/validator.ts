@@ -36,6 +36,10 @@ export class ApiValidator {
     }
     // ===== STATUS CODE =====
     static statusCode(response: AxiosResponse, expected: number) {
+        if (response.status !== expected) {
+            console.log(`❌ Expected: ${expected} | Received: ${response.status}`);
+            console.log(`❌ Response body:\n${JSON.stringify(response.data, null, 2)}`);
+        }
         expect(response.status).toBe(expected);
     }
 

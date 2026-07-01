@@ -1,0 +1,49 @@
+{
+    "order": {
+        "correlationId": "{{$guid}}",
+        "buyerId": "c1963b61-18c2-43a0-b1d2-93635ee5c4ce",
+        "buyerShopId": "be065c87-87ce-4824-a821-97395b72d0f3",
+        "customerNumber": "+919940697976",
+        "buyerAccountId": "Sub Dealer",
+        "buyerShopName": "Thinh Buyer",
+        "sellerShopId": "1b4314ce-9b97-4ab2-af75-04137a976d99",
+        "sellerId": "1b4314ce-9b97-4ab2-af75-04137a976d99",
+        "sellerShopName": "Thinh Dealer Test",
+        "metaInfo": {
+            "locationId": "a358d702-f9e7-4f73-8b52-5c0d6b500006",
+            "locationLevel": 1,
+            "pickupDate": "2026-06-30",
+            "buyerNotes": "Test from dev team",
+            "paymentTermsCode": "3",
+            "lpo": "test$%@%@"
+        },
+        "orderDelivery": {
+            "truckNum": "กทม@@1234",
+            "orderItems": [
+                     {
+                        "serialNum": 1,
+                        "productId": "311e5481-d820-4036-8cd8-0613373f4c82",
+                        "sku": "PKE4TG5GF",
+                        "quantity": 80,
+                        "loadingType": "SLING_LOADED",
+                        "slingSku": "W02801", 
+                        "totalVolume": 4,
+                        "volumeUnits": "MT",
+                        "slingCount": 2
+                    },
+                    {
+                        "serialNum": 2,
+                        "productId": "YARA_MILA_14_14_21#TONNE",
+                        "sku": "PG302P54A-T1",
+                        "quantity": 200,
+                        "loadingType": "FLOOR_LOADED",
+                        "slingSku": null, 
+                        "totalVolume": 200,
+                        "volumeUnits": "MT",
+                        "slingCount": null
+                    }
+                     
+            ]
+        }
+    }
+}
