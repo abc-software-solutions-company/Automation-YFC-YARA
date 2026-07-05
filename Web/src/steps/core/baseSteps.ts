@@ -146,6 +146,12 @@ When("User clicks on the element of data-testid {string}", async function (this:
     await this.basePage.clickElementByDataTestId(testId);
 });
 
+When("User clicks on the element of data-testid {string} {int} times", async function (this: CustomWorld, testId: string, times: number) {
+    for (let i = 0; i < times; i++) {
+        await this.basePage.clickElementByDataTestId(testId);
+    }
+});
+
 When("User selects the {string} option from the dropdown", async function (this: CustomWorld, label: string) {
     await this.basePage.selectFirstDropdownOption(label);
 });

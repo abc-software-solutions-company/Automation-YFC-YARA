@@ -17,8 +17,8 @@ Feature: Edit Profile Page
         When User clicks on the "<Okay>" button
 
         Examples:
-            | Country  | Language | Full Name   | Location | Farm Size | Select Farm Size        | Enter Farm Size         | Account | My Profile   | Select crops | Save Profile   | Profile Completed  | Des Completed                                                | Okay |
-            | Tanzania | Swahili  | Jina kamili | Dodoma   | Ekari     | Chagua ukubwa wa shamba | Andika ukubwa wa shamba | Akaunti | Wasifu wangu | Chagua mazao | Hifadhi wasifu | Wasifu umekamilika | Unaweza kuhariri taarifa za wasifu kwenye ukurasa wa akaunti | Sawa |
+            | Country  | Language | Full Name | Location | Farm Size | Select Farm Size | Enter Farm Size | Account | My Profile | Select crops | Save Profile | Profile Completed | Des Completed                                         | Okay |
+            | Tanzania | English  | Full name | Dodoma   | Acres     | Select farm size | Enter farm size | Account | My profile | Select crops | Save profile | Profile completed | You can always edit profile details from account page | Okay |
 # | India     | English    | Full name        | Bengal       | Acres        | Select farm size        | Enter farm size              | Account | My profile   | Select crops    | Save profile   | Profile completed   | You can always edit profile details from account page        | Okay |
 # | Indonesia | Indonesian | Nama lengkap     | Jakarta      | Hektare      | Pilih ukuran kebun      | Masukkan ukuran kebun        | Akun    | Profil saya  | Tanaman dipilih | Simpan profil  | Profil selesai      | Anda selalu dapat mengedit detail profil dari halaman akun   | Oke  |
 # | Kenya     | English    | Full name        | Nairobi      | Hectares     | Select farm size        | Enter farm size              | Account | My profile   | Select crops    | Save profile   | Profile completed   | You can always edit profile details from account page        | Okay |
