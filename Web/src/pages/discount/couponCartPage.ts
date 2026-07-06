@@ -24,9 +24,7 @@ export class CouponCartPage extends BasePage {
 
     async applyCouponIfNeeded(couponCode: string): Promise<void> {
         const card = this.couponCard(couponCode);
-
         await card.waitFor({ state: "visible" });
-
         if (
             await card
                 .getByRole("button", { name: this.resolve("Remove") })
@@ -36,14 +34,12 @@ export class CouponCartPage extends BasePage {
             await this.page.goBack();
             return;
         }
-
         await card.getByRole("button", { name: this.resolve("Apply") }).click();
         await this.clickOnBTNGeneral("continue");
     }
 
     async clickAddToCartButton(productName: string): Promise<void> {
         const productCard = this.productCard(productName);
-
         await productCard.waitFor({ state: "visible" });
         await productCard.locator('[data-testid="addToCartBtn"]').click();
     }

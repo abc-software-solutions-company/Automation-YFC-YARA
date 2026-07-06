@@ -6,9 +6,12 @@ export class CouponHomePage extends BasePage {
         super(page);
     }
 
-    async verifyCouponCard(couponCode: string, couponName: string, discount: string): Promise<void> {
-        const card = this.page.locator(`.CouponCard_CouponCardInnerVarient1__xL8QV:has-text("${couponCode}")`);
+    couponCard(couponCode: string) {
+        return this.page.locator(`.CouponCard_CouponCardInnerVarient1__xL8QV:has-text("${couponCode}")`);
+    }
 
+    async verifyCouponCard(couponCode: string, couponName: string, discount: string): Promise<void> {
+        const card = this.couponCard(couponCode);
         await expect(card).toBeVisible();
         await expect(card).toContainText(discount);
         await expect(card).toContainText(couponCode);
