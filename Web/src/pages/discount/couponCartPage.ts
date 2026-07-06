@@ -13,9 +13,6 @@ export class CouponCartPage extends BasePage {
         .first();
 
     await card.waitFor({ state: "visible" });
-    console.log("Locale:", this.locale);
-    console.log("Remove:", this.resolve("Remove"));
-    console.log("Apply:", this.resolve("Apply"));
 
     if (await card.getByRole("button", { name: this.resolve("Remove") }).isVisible().catch(() => false)) {
         await this.page.goBack();
@@ -25,10 +22,6 @@ export class CouponCartPage extends BasePage {
     await card.getByRole("button", { name: this.resolve("Apply") }).click();
     await this.clickOnBTNGeneral("continue");
 }
-
-
-
-// async applyCouponIfNeeded(couponCode: string): Promise<void> { const card = this.page .locator('[class*="CouponCard_CouponCardInnerVarient1"]') .filter({ hasText: couponCode }) .first(); await card.waitFor({ state: "visible" }); const removeText = this.resolve("remove"); const applyText = this.resolve("apply"); const text = await card.innerText(); if (text.includes(removeText)) { await this.page.goBack(); return; } await card.getByRole("button", { name: applyText }).click(); await this.clickOnBTNGeneral("continue"); }
 
     async clickAddToCartButton(productName: string): Promise<void> {
 

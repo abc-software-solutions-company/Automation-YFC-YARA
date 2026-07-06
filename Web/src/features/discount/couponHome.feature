@@ -1,12 +1,5 @@
 Feature:  Verify coupon show home page
 
-    # discount tạo 1 page riêng -> home, page cart,  b2c order apply coupons
-
-    # cart page dung được k, k dung sẽ xoá hết cho c Diễm
-
-    # measuring, packeging unit
-
-
     @verifyDiscountOrderLevelUnique
     Scenario Outline: Verify discount Order Level Flow with unique code + packaging unit
         Given User goes to dashboard page in the "<Country>" country with "<Language>" language

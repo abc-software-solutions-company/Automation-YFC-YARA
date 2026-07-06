@@ -1,6 +1,5 @@
 Feature: Verify apply coupon flow Order Level B2C
 
-    Background:
     @b2c_emptycart
     Scenario: Verify the shopping cart is empty
         Given User log in with phone number "<Phone number>" in the "<Country>" country with "<Language>" language
@@ -21,7 +20,7 @@ Feature: Verify apply coupon flow Order Level B2C
         And User clicks on "<Add to Cart>" button in the "<Product name>" section
         And User clicks on the "<View cart>" button
         Then User verifies the "<Shop name>" text is "visible"
-        And User clicks on the element of data-testid "plus more icon" 10 times
+        And User clicks on the element of data-testid "plus more icon" 5 times
         And User clicks on the "<Delivery option>" section
 
         # And User ensures coupon is applied with code "<couponCode>", name "<couponName>", discount "<discount>" and coupon id "1f84a506-cd8b-43af-8099-460b4d9a1fd5"
@@ -50,7 +49,7 @@ Feature: Verify apply coupon flow Order Level B2C
         And User clicks on "<Add to Cart>" button in the "<Product name>" section
         And User clicks on the "<View cart>" button
         Then User verifies the "<Shop name>" text is "visible"
-        And User clicks on the element of data-testid "plus more icon" 10 times
+        And User clicks on the element of data-testid "plus more icon" 5 times
         And User clicks on the "<Delivery option>" section
 
         # And User ensures coupon is applied with code "<couponCode>", name "<couponName>", discount "<discount>" and coupon id "a8e8d067-3f37-4bd2-ae5e-ca355a67a521"
