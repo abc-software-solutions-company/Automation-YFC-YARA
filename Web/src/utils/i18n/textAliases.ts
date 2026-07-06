@@ -25,6 +25,8 @@ export const textAliases: Record<string, string> = {
     "Place Order": "common.place_order",
     "Yes, Confirm": "common.yes_confirm",
     continue: "common.continue",
+    Remove: "common.remove",
+    Apply: "common.apply",
     "Privacy and legal": "common.privacy_and_legal",
     Communication: "common.communication",
     "Marketing communications": "common.marketing_communications",

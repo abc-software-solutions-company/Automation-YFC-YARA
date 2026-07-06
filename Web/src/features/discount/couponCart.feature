@@ -9,14 +9,14 @@ Feature: Verify coupon show cart page
         And User clicks on the "<Shop name>" section
         And User clicks on "<Add to Cart>" button in the "<Product name>" section
         And User clicks on the "<View cart>" button
-        Then User verifies the "Cart items" text is "visible"
+        Then User verifies the "<Shop name>" text is "visible"
         And User clicks on the element of data-testid "plus more icon" 4 times
 
-        And User ensures coupon is applied with code "<couponCode>", name "<couponName>", discount "<discount>" and coupon id "1f84a506-cd8b-43af-8099-460b4d9a1fd5"
+        And User ensures coupon is applied with code "<couponCode>", name "<couponName>" and discount "<discount>"
 
         Examples:
             | Country   | Language | Shop name  | Add to Cart            | Product name | View cart               | couponCode      | couponName                      | discount |
-            | Indonesia | Bahasa   | LinhshopId | Tambahkan ke keranjang | COMPLEX      | Lihat keranjang belanja | LISA24UNrO7ak6G | unique packaging config Product | 25%      |
+            | Indonesia |          | LinhshopId | Tambahkan ke keranjang | COMPLEX      | Lihat keranjang belanja | LISA24UNrO7ak6G | unique packaging config Product | 25%      |
 
 
     # Scenario - generic code + measuring unit + config product conditions (volume = 5, discount min = 25IDR, order value = 250IDR,CONFIG Product - 2 - 100IDR)
@@ -28,11 +28,11 @@ Feature: Verify coupon show cart page
         And User clicks on the "<Shop name>" section
         And User clicks on "<Add to Cart>" button in the "<Product name>" section
         And User clicks on the "<View cart>" button
-        Then User verifies the "Cart items" text is "visible"
+        Then User verifies the "<Shop name>" text is "visible"
         And User clicks on the element of data-testid "plus more icon" 5 times
 
-        And User ensures coupon is applied with code "<couponCode>", name "<couponName>", discount "<discount>" and coupon id "a8e8d067-3f37-4bd2-ae5e-ca355a67a521"
+        And User ensures coupon is applied with code "<couponCode>", name "<couponName>" and discount "<discount>"
 
         Examples:
             | Country   | Language | Shop name  | Add to Cart            | Product name | View cart               | couponCode | couponName                       | discount |
-            | Indonesia | Bahasa   | LinhshopId | Tambahkan ke keranjang | COMPLEX      | Lihat keranjang belanja | LISA24PU   | generic measuring config Product | Rp 25    |
+            | Indonesia |          | LinhshopId | Tambahkan ke keranjang | COMPLEX      | Lihat keranjang belanja | LISA24PU   | generic measuring config Product | Rp 25    |

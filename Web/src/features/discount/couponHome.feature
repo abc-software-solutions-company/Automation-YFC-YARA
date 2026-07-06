@@ -16,7 +16,7 @@ Feature:  Verify coupon show home page
 
         Examples:
             | Country   | Language | couponCode      | couponName                      | discount |
-            | Indonesia | Bahasa   | LISA24UNrO7ak6G | unique packaging config Product | 25%      |
+            | Indonesia |          | LISA24UNrO7ak6G | unique packaging config Product | 25%      |
 
     @verifyDiscountOrderLevelGeneric
     Scenario Outline: Verify discount Order Level Flow with generic code + measuring unit
@@ -27,5 +27,5 @@ Feature:  Verify coupon show home page
 
         Examples:
             | Country   | Language | couponCode | couponName                       | discount |
-            | Indonesia | Bahasa   | LISA24PU   | generic measuring config Product | Rp 25    |
+            | Indonesia |          | LISA24PU   | generic measuring config Product | Rp 25    |
 
