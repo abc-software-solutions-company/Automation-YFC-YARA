@@ -4,7 +4,7 @@ Feature:  Verify coupon show home page
     Scenario Outline: Verify discount Order Level Flow with unique code + packaging unit
         Given User goes to dashboard page in the "<Country>" country with "<Language>" language
         When User clicks on the element of data-testid "couponsList"
-        And User clicks on "Lihat semua" in the "Kupon" section
+        And User clicks on "View all button" in the "Coupon" section
         Then User verifies coupon card with code "<couponCode>", name "<couponName>" and discount "<discount>"
 
         Examples:
@@ -15,7 +15,7 @@ Feature:  Verify coupon show home page
     Scenario Outline: Verify discount Order Level Flow with generic code + measuring unit
         Given User goes to dashboard page in the "<Country>" country with "<Language>" language
         When User clicks on the element of data-testid "couponsList"
-        And User clicks on "Lihat semua" in the "Kupon" section
+        And User clicks on "View all button" in the "Coupon" section
         Then User verifies coupon card with code "<couponCode>", name "<couponName>" and discount "<discount>"
 
         Examples:

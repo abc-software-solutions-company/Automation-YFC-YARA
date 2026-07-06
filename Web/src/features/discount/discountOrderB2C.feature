@@ -2,7 +2,7 @@ Feature: Verify apply coupon flow Order Level B2C
 
     @b2c_emptycart
     Scenario: Verify the shopping cart is empty
-        Given User log in with phone number "<Phone number>" in the "<Country>" country with "<Language>" language
+        Given User goes to dashboard page in the "<Country>" country with "<Language>" language
         When User goes to "Home" page
         And User clicks on the element of class "cart icon"
         Then User verifies the "<Message>" text is "visible"
