@@ -1,0 +1,5 @@
+{
+    "errorCode": 7011,
+    "errorMessage": "Pickup date must be within 7 days from today (D0 to D+6). Found: 2027-06-30",
+    "correlationId": "1b04771f-6571-4f82-87e1-fb4f626f7ca6"
+}

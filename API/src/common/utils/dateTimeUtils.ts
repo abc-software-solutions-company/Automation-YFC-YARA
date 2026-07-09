@@ -73,6 +73,18 @@ export class DateTimeUtils {
         }
     }
 
+    static parseDynamicDate(input: string): string {
+        const match = input.match(/(yesterday|today|tomorrow)([+-]\d+)?/);
+        if (!match) {
+            throw new Error(`Invalid dynamic date expression: ${input}`);
+        }
+        const [, keyword, offsetStr] = match;
+        const baseOffset = keyword === "yesterday" ? -1 : keyword === "tomorrow" ? 1 : 0;
+        const extraOffset = parseInt(offsetStr);
+
+        return this.addDays(baseOffset + extraOffset);
+    }
+
     // ===== Month operations) =====
     private static shiftMonth(offset: number): Date {
         const d = new Date();
