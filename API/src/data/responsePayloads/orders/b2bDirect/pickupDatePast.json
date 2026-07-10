@@ -1,0 +1,5 @@
+{
+    "errorCode": 7010,
+    "errorMessage": "Pickup date cannot be in the past. Found: 2026-06-30",
+    "correlationId": "78c1af8e-58b5-4fd3-b298-35f09f2e6512"
+}
