@@ -6,15 +6,9 @@ Feature: API create a B2B Direct order
         # ------------- Created order ---------
         Given I am "valid_token" authenticated on "th_marketplace_service_yc_token" service with the phone number "915555500076"
         And I build dynamic payload from 'order/b2bDirect/b2bDirectOrder' with:
-            <<<<<<< HEAD
             | key                       | value        |
             | order.correlationId       | {{$uuid}}    |
             | order.metaInfo.pickupDate | <PickupDate> |
-            =======
-            | key                       | value         |
-            | order.correlationId       | {{$uuid}}     |
-            | order.metaInfo.pickupDate | {{$tomorrow}} |
-        >>>>>>> main
         When I send 'POST' request to 'b2bDirectOrder' on 'th_marketplace_service_yc_token' service
         Then The response status should be 201
         Then I extract from response:
@@ -49,7 +43,6 @@ Feature: API create a B2B Direct order
             | data.createdAt       | IGNORE      |
             | data.transactionDate | IGNORE      |
 
-        <<<<<<< HEAD
         Examples:
             | PickupDate    |
             | {{$tomorrow}} |
@@ -57,11 +50,7 @@ Feature: API create a B2B Direct order
             | {{$today+6d}} |
 
     @b2bDirectOrderApisInValidToken
-    Scenario: B2B Direct order in TH country with invalid token
-    =======
-    @b2bDirectOrderApisInValidToken
     Scenario: B2B Direct order in TH country
-        >>>>>>> main
         Given I am "<invalid_token>" authenticated on "th_marketplace_service_yc_token" service with the phone number "915555500076"
         And I build dynamic payload from 'order/b2bDirect/b2bDirectOrder' with:
             | key                       | value         |
