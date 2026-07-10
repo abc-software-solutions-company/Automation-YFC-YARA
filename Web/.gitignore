@@ -140,5 +140,3 @@ report/
 
 .auth
 .auth/
-
-mockTokenClient.ts
