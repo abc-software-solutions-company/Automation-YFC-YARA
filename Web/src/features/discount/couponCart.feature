@@ -7,7 +7,7 @@ Feature: Verify coupon show cart page
         Then User clicks on the "Store tab" button
         And User enters "<Shop name>" into the "Search box" field
         And User clicks on the "<Shop name>" section
-        And User clicks on "<Add to Cart>" button in the "<Product name>" section
+        And User clicks on the "<Add to Cart>" button for product "<Product name>"
         And User clicks on the "<View cart>" button
         Then User verifies the "<Shop name>" text is "visible"
         And User clicks on the element of data-testid "plus more icon" 4 times
@@ -28,7 +28,7 @@ Feature: Verify coupon show cart page
         Then User clicks on the "Store tab" button
         And User enters "<Shop name>" into the "Search box" field
         And User clicks on the "<Shop name>" section
-        And User clicks on "<Add to Cart>" button in the "<Product name>" section
+        And User clicks on the "<Add to Cart>" button for product "<Product name>"
         And User clicks on the "<View cart>" button
         Then User verifies the "<Shop name>" text is "visible"
         And User clicks on the element of data-testid "plus more icon" 5 times
