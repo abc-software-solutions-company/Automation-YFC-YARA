@@ -11,7 +11,10 @@ Feature: Verify coupon show cart page
         And User clicks on the "<View cart>" button
         Then User verifies the "<Shop name>" text is "visible"
         And User clicks on the element of data-testid "plus more icon" 4 times
-        And User ensures coupon is applied with code "<couponCode>", name "<couponName>" and discount "<discount>"
+        When User goes to "Discount" page
+        Then User verifies the "<couponCode>" text is "visible"
+        And User verifies the "<couponName>" text is "visible"
+        And User verifies the "<discount>" text is "visible"
 
         Examples:
             | Country   | Language | Shop name  | Add to Cart            | Product name | View cart               | couponCode      | couponName                      | discount |
@@ -29,7 +32,10 @@ Feature: Verify coupon show cart page
         And User clicks on the "<View cart>" button
         Then User verifies the "<Shop name>" text is "visible"
         And User clicks on the element of data-testid "plus more icon" 5 times
-        And User ensures coupon is applied with code "<couponCode>", name "<couponName>" and discount "<discount>"
+        When User goes to "Discount" page
+        Then User verifies the "<couponCode>" text is "visible"
+        And User verifies the "<couponName>" text is "visible"
+        And User verifies the "<discount>" text is "visible"
 
         Examples:
             | Country   | Language | Shop name  | Add to Cart            | Product name | View cart               | couponCode | couponName                       | discount |

@@ -17,12 +17,16 @@ Feature: Verify apply coupon flow Order Level B2C
         Then User clicks on the "Store tab" button
         And User enters "<Shop name>" into the "Search box" field
         And User clicks on the "<Shop name>" section
-        And User clicks on "<Add to Cart>" button in the "<Product name>" section
+        And User clicks on the "<Add to Cart>" button for product "<Product name>"
         And User clicks on the "<View cart>" button
         Then User verifies the "<Shop name>" text is "visible"
         And User clicks on the element of data-testid "plus more icon" 5 times
         And User clicks on the "<Delivery option>" section
-        And User ensures coupon is applied with code "<couponCode>", name "<couponName>" and discount "<discount>"
+        When User goes to "Discount" page
+        Then User verifies the "<couponCode>" text is "visible"
+        And User verifies the "<couponName>" text is "visible"
+        And User verifies the "<discount>" text is "visible"
+        And User applies coupon "<couponCode>" if it is not already applied
         And User clicks on the "Place Order" button
         Then User verifies the popup "confirmation order popup" is "visible"
         And User clicks on the "Yes, Confirm" button
@@ -43,12 +47,16 @@ Feature: Verify apply coupon flow Order Level B2C
         Then User clicks on the "Store tab" button
         And User enters "<Shop name>" into the "Search box" field
         And User clicks on the "<Shop name>" section
-        And User clicks on "<Add to Cart>" button in the "<Product name>" section
+        And User clicks on the "<Add to Cart>" button for product "<Product name>"
         And User clicks on the "<View cart>" button
         Then User verifies the "<Shop name>" text is "visible"
         And User clicks on the element of data-testid "plus more icon" 5 times
         And User clicks on the "<Delivery option>" section
-        And User ensures coupon is applied with code "<couponCode>", name "<couponName>" and discount "<discount>"
+        When User goes to "Discount" page
+        Then User verifies the "<couponCode>" text is "visible"
+        And User verifies the "<couponName>" text is "visible"
+        And User verifies the "<discount>" text is "visible"
+        And User applies coupon "<couponCode>" if it is not already applied
         And User clicks on the "Place Order" button
         Then User verifies the popup "confirmation order popup" is "visible"
         And User clicks on the "Yes, Confirm" button

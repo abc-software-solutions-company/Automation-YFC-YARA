@@ -19,8 +19,7 @@ import { ProfilePage } from "../pages/account/profilePage";
 import { ClaimRewardPage } from "../pages/account/claimRewardPage";
 import { StoresNearYouPage } from "../pages/home/storesNearYouPage";
 import { TestDataStore } from "../utils/i18n/testDataLoader";
-import { CouponCartPage } from "../pages/discount/couponCartPage";
-import { CouponHomePage } from "../pages/discount/couponHomePage";
+import { CouponPage } from "../pages/discount/couponPage";
 export class CustomWorld extends World {
     // Playwright lifecycle (per scenario)
     browser!: Browser;
@@ -53,8 +52,7 @@ export class CustomWorld extends World {
     profilePage!: ProfilePage;
     claimRewardPage!: ClaimRewardPage;
     storesNearYouPage!: StoresNearYouPage;
-    couponHomePage!: CouponHomePage;
-    couponCartPage!: CouponCartPage;
+    couponPage!: CouponPage;
 
     ticketId?: string;
     orderNumbers: string[] = [];
@@ -88,8 +86,7 @@ export class CustomWorld extends World {
             this.getHelpPage,
             this.editProfilePage,
             this.storesNearYouPage,
-            this.couponHomePage,
-            this.couponCartPage,
+            this.couponPage,
         ];
         for (const p of pages) {
             if (p) {
@@ -119,8 +116,7 @@ export class CustomWorld extends World {
         this.profilePage = new ProfilePage(page);
         this.claimRewardPage = new ClaimRewardPage(page);
         this.storesNearYouPage = new StoresNearYouPage(page);
-        this.couponHomePage = new CouponHomePage(page);
-        this.couponCartPage = new CouponCartPage(page);
+        this.couponPage = new CouponPage(page);
     }
 
     /**

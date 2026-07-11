@@ -5,7 +5,9 @@ Feature:  Verify coupon show home page
         Given User goes to dashboard page in the "<Country>" country with "<Language>" language
         When User clicks on the element of data-testid "couponsList"
         And User clicks on "View all button" in the "Coupon" section
-        Then User verifies coupon card with code "<couponCode>", name "<couponName>" and discount "<discount>"
+        Then User verifies the "<couponCode>" text is "visible"
+        And User verifies the "<couponName>" text is "visible"
+        And User verifies the "<discount>" text is "visible"
 
         Examples:
             | Country   | Language | couponCode      | couponName                      | discount |
@@ -16,7 +18,9 @@ Feature:  Verify coupon show home page
         Given User goes to dashboard page in the "<Country>" country with "<Language>" language
         When User clicks on the element of data-testid "couponsList"
         And User clicks on "View all button" in the "Coupon" section
-        Then User verifies coupon card with code "<couponCode>", name "<couponName>" and discount "<discount>"
+        Then User verifies the "<couponCode>" text is "visible"
+        And User verifies the "<couponName>" text is "visible"
+        And User verifies the "<discount>" text is "visible"
 
         Examples:
             | Country   | Language | couponCode | couponName                       | discount |

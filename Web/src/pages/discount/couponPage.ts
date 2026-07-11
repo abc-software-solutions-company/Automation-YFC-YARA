@@ -1,12 +1,12 @@
-import { Page } from "@playwright/test";
+import { Page, expect } from "@playwright/test";
 import { BasePage } from "../core/basePage";
 
-export class CouponCartPage extends BasePage {
+export class CouponPage extends BasePage {
     constructor(page: Page) {
         super(page);
     }
 
-    couponCard = (couponCode: string) => {
+      couponCard = (couponCode: string) => {
         return this.page
             .locator('[class*="CouponCard_CouponCardInnerVarient1"]')
             .filter({ hasText: couponCode })
