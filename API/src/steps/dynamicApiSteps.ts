@@ -204,3 +204,7 @@ Then("The response should contain data:", function (this: CustomWorld, dataTable
     }));
     ApiValidator.containsJson(this.response.data, resolvedRows);
 });
+
+When("I wait for {int} seconds", async function (this: CustomWorld, seconds: number) {
+    await new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+});

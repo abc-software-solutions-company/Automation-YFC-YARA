@@ -45,7 +45,7 @@ Feature: Access System
         And User clicks on the "Confirm" button
 
 
-        # Verify cart page is visibl
+        # Verify cart page is visible
         Then User verify the "<Cart item page>" header is "visible"
         And User verify the "Place Order" button is "visible"
 

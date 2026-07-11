@@ -78,6 +78,9 @@ export class DynamicValueEngine {
         if (key.startsWith("now")) {
             return DateTimeUtils.parseDynamicDateTime(key);
         }
+        if (/^(today|yesterday|tomorrow)[+-]\d+d$/.test(key)) {
+            return DateTimeUtils.parseDynamicDate(key);
+        }
 
         throw new Error(`Engine function '${key}' not supported`);
     }
