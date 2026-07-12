@@ -7,19 +7,11 @@ export class CouponPage extends BasePage {
     }
 
       couponCard = (couponCode: string) => {
-        return this.page
-            .locator('[class*="CouponCard_CouponCardInnerVarient1"]')
-            .filter({ hasText: couponCode })
-            .first();
+        return this.page.locator('[class*="CouponCard_CouponCardInnerVarient1"]').filter({ hasText: couponCode });
     };
 
     productCard = (productName: string) => {
-        return this.page
-            .locator('[class*="ProductCard_card"]')
-            .filter({
-                has: this.page.getByText(productName, { exact: true }),
-            })
-            .first();
+        return this.page.locator('[class*="ProductCard_card"]').filter({has: this.page.getByText(productName, { exact: true }),});
     };
 
     async applyCouponIfNeeded(couponCode: string): Promise<void> {
