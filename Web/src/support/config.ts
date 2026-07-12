@@ -222,6 +222,7 @@ export const PAGE_ROUTES: Record<string, string> = {
     Home: "home",
     "My orders": "profile/myorders?status=Pending",
     "privacy-and-legal": "profile/privacy-and-legal",
+    Discounts: "cart/discounts",
 };
 
 export function buildLocale(country: string, language?: string): string {
